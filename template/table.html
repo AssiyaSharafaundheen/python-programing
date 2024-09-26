@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table  border="20px">
+    <tr>
+        <th>id</th>
+
+        <th>Name</th>
+        <th> place</th>
+        <th> phone</th>
+        <th>Actions</th>
+    </tr>
+    <tr>
+        {% for i in ob %}
+        <td> {{i.id}}</td>
+
+        <td> {{i.name}}</td>
+        <td> {{i.place}}</td>
+        <td> {{i.phone}}</td>
+        <td><button><a href="{% url 'del2' i.id %}"> Delete</a></button></td>
+        <td><button><a href="{% url 'update' i.id %}"> update</a></button></td>
+
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

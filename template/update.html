@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action= "{% url 'update' ob.id %}" method= "post">
+    {% csrf_token %}
+    name
+    <input type="text" name="name" value="{{ob.name}}"><br><br>
+    place
+    <input type="text" name="place" value="{{ob.place}}"><br><br>
+    number
+    <input type="text" name="phone" value="{{ob.phone}}"><br><br><br>
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>
